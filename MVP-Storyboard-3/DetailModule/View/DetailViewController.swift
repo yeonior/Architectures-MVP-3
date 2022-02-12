@@ -19,6 +19,10 @@ class DetailViewController: UIViewController {
         presenter.setComment()
         commentLabel.numberOfLines = 0
     }
+    
+    @IBAction func popButtonAction(_ sender: UIButton) {
+        presenter.tap()
+    }
 }
 
 extension DetailViewController: DetailViewProtocol {

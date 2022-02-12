@@ -14,7 +14,7 @@
 		A29EBE9327B6E7010051010A /* MVP_Storyboard_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EBE9227B6E7010051010A /* MVP_Storyboard_3Tests.swift */; };
 		A29EBE9D27B6E7010051010A /* MVP_Storyboard_3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EBE9C27B6E7010051010A /* MVP_Storyboard_3UITests.swift */; };
 		A29EBE9F27B6E7010051010A /* MVP_Storyboard_3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EBE9E27B6E7010051010A /* MVP_Storyboard_3UITestsLaunchTests.swift */; };
-		A29EBEAC27B6E7A50051010A /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EBEAB27B6E7A50051010A /* ModuleBuilder.swift */; };
+		A29EBEAC27B6E7A50051010A /* AssemblyBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EBEAB27B6E7A50051010A /* AssemblyBuilder.swift */; };
 		A29EBEB227B6E7EA0051010A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EBEB127B6E7EA0051010A /* Comment.swift */; };
 		A29EBEB427B6E8100051010A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EBEB327B6E8100051010A /* MainViewController.swift */; };
 		A29EBEB627B6E82A0051010A /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29EBEB527B6E82A0051010A /* MainView.xib */; };
@@ -23,6 +23,7 @@
 		A29EBEBF27B6E9680051010A /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A29EBEBD27B6E9680051010A /* DetailViewController.xib */; };
 		A29EBEC127B6EA070051010A /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EBEC027B6EA070051010A /* DetailPresenter.swift */; };
 		A29EBEC427B6EA370051010A /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29EBEC327B6EA370051010A /* NetworkService.swift */; };
+		A2CC4E9327B7E4E200E43406 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CC4E9227B7E4E200E43406 /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,7 @@
 		A29EBE9827B6E7010051010A /* MVP-Storyboard-3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVP-Storyboard-3UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A29EBE9C27B6E7010051010A /* MVP_Storyboard_3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_Storyboard_3UITests.swift; sourceTree = "<group>"; };
 		A29EBE9E27B6E7010051010A /* MVP_Storyboard_3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVP_Storyboard_3UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A29EBEAB27B6E7A50051010A /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		A29EBEAB27B6E7A50051010A /* AssemblyBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyBuilder.swift; sourceTree = "<group>"; };
 		A29EBEB127B6E7EA0051010A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		A29EBEB327B6E8100051010A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A29EBEB527B6E82A0051010A /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		A29EBEBD27B6E9680051010A /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		A29EBEC027B6EA070051010A /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 		A29EBEC327B6EA370051010A /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A2CC4E9227B7E4E200E43406 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,8 @@
 			children = (
 				A29EBE7B27B6E7000051010A /* AppDelegate.swift */,
 				A29EBE7D27B6E7000051010A /* SceneDelegate.swift */,
-				A29EBEAB27B6E7A50051010A /* ModuleBuilder.swift */,
+				A2CC4E9227B7E4E200E43406 /* Router.swift */,
+				A29EBEAB27B6E7A50051010A /* AssemblyBuilder.swift */,
 				A29EBEAD27B6E7AF0051010A /* MainModule */,
 				A29EBEB927B6E9180051010A /* DetailModule */,
 				A29EBEC227B6EA170051010A /* ServiceLayer */,
@@ -346,10 +349,11 @@
 			files = (
 				A29EBE7C27B6E7000051010A /* AppDelegate.swift in Sources */,
 				A29EBEB827B6E90E0051010A /* MainPresenter.swift in Sources */,
+				A2CC4E9327B7E4E200E43406 /* Router.swift in Sources */,
 				A29EBE7E27B6E7000051010A /* SceneDelegate.swift in Sources */,
 				A29EBEC127B6EA070051010A /* DetailPresenter.swift in Sources */,
 				A29EBEC427B6EA370051010A /* NetworkService.swift in Sources */,
-				A29EBEAC27B6E7A50051010A /* ModuleBuilder.swift in Sources */,
+				A29EBEAC27B6E7A50051010A /* AssemblyBuilder.swift in Sources */,
 				A29EBEB227B6E7EA0051010A /* Comment.swift in Sources */,
 				A29EBEB427B6E8100051010A /* MainViewController.swift in Sources */,
 				A29EBEBE27B6E9680051010A /* DetailViewController.swift in Sources */,
