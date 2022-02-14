@@ -22,7 +22,10 @@ class MockNetworkService: NetworkServiceProtocol {
     
     var comments: [Comment]!
     
-    init(comments: [Comment]?) {
+//    init() {}
+    
+    convenience init(comments: [Comment]?) {
+        self.init()
         self.comments = comments
     }
     
@@ -65,17 +68,39 @@ class MainPresenterTest: XCTestCase {
         networkService = MockNetworkService(comments: [comment])
         presenter = MainPresenter(networkService: networkService, view: view, router: router)
         
-        var catchedComments: [Comment]?
+        var caughtComments: [Comment]?
         
         networkService.getComments { result in
             switch result {
             case .success(let comments):
-                catchedComments = comments
+                caughtComments = comments
             case .failure(let error):
                 print(error)
             }
         }
         
-        XCTAssertNotEqual(catchedComments?.count, 0)
+        XCTAssertNotEqual(caughtComments?.count, 0)
+    }
+    
+    func testGetFailureComments() {
+        let comment = Comment(postId: 1, id: 2, name: "Foo", email: "Baz", body: "Bar")
+        comments.append(comment)
+        
+        view = MockView()
+        networkService = MockNetworkService()
+        presenter = MainPresenter(networkService: networkService, view: view, router: router)
+        
+        var caughtError: Error?
+        
+        networkService.getComments { result in
+            switch result {
+            case .success(_):
+                break
+            case .failure(let error):
+                caughtError = error
+            }
+        }
+        
+        XCTAssertNotNil(caughtError)
     }
 }
